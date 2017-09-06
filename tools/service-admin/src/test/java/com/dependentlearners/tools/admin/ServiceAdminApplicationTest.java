@@ -1,4 +1,4 @@
-package com.dependentlearners.service.admin;
+package com.dependentlearners.tools.admin;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
