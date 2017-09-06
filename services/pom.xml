@@ -16,7 +16,8 @@
 		<module>customer</module>
 		<module>transaction</module>
         <module>frameworks</module>
-    </modules>
+		<module>batches</module>
+	</modules>
 
 	<parent>
 		<groupId>com.dependentlearners</groupId>

@@ -1,4 +1,4 @@
-package com.dependentlearners.services.card;
+package com.dependentlearners.tools.config;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,10 +7,10 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class CardApplicationTests {
+public class ConfigApplicationTest {
 
-	@Test
-	public void contextLoads() {
-	}
+    @Test
+    public void contextLoads() {
+    }
 
 }
