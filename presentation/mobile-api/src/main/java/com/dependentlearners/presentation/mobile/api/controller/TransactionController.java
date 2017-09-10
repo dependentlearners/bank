@@ -1,21 +1,44 @@
 package com.dependentlearners.presentation.mobile.api.controller;
 
+import com.dependentlearners.presentation.mobile.api.representation.Transaction;
+import com.dependentlearners.presentation.mobile.api.resource.TransactionResource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("transaction")
 public class TransactionController {
 
+    private final TransactionResource transactionResource;
+
     @Autowired
-    private TransactionResource transactionResource;
+    public TransactionController(TransactionResource transactionResource) {
+        this.transactionResource = transactionResource;
+    }
+
+    @RequestMapping(method = RequestMethod.GET)
+    public ResponseEntity<?> getAll(){
+        return transactionResource.getAllTransactions();
+    }
 
     @RequestMapping(path = "{id}", method = RequestMethod.GET)
-    public ResponseEntity<?> getTransaction(@PathVariable long id){
+    public ResponseEntity<?> get(@PathVariable long id){
         return transactionResource.getTransactionById(id);
+    }
+
+    @RequestMapping(method = RequestMethod.POST)
+    public ResponseEntity<?> create(@RequestBody Transaction transaction){
+        return transactionResource.createTransaction(transaction);
+    }
+
+    @RequestMapping(path = "{id}", method = RequestMethod.DELETE)
+    public ResponseEntity<?> remove(@PathVariable long id){
+        return transactionResource.removeTransaction(id);
+    }
+
+    @RequestMapping(path = "{id}", method = RequestMethod.PUT)
+    public ResponseEntity<?> update(@PathVariable long id, @RequestBody Transaction transaction){
+        return transactionResource.modifyTransaction(id, transaction);
     }
 }

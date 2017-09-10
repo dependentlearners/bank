@@ -3,7 +3,7 @@ spring:
     name: account
   cloud:
     config:
-      name: common,account
+      name: common,logback.xml,account
 
 server:
   port: 0

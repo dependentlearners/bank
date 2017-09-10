@@ -3,7 +3,7 @@ spring:
     name: api-gateway
   cloud:
       config:
-        name: common,api-gateway
+        name: common,logback.xml,api-gateway
 
 server:
   port: 80

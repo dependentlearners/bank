@@ -3,7 +3,7 @@ spring:
     name: card
   cloud:
     config:
-      name: common,card
+      name: common,logback.xml,card
 
 server:
   port: 0

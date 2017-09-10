@@ -3,7 +3,7 @@ spring:
     name: transaction
   cloud:
     config:
-      name: common,transaction
+      name: common,logback.xml,transaction
 
 server:
   port: 0

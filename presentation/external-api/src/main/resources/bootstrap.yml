@@ -3,7 +3,7 @@ spring:
     name: external-api
   cloud:
     config:
-      name: common,external-api
+      name: common,logback.xml,external-api
 
 server:
   port: 0

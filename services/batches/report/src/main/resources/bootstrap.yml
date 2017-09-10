@@ -3,7 +3,7 @@ spring:
     name: report-batch
   cloud:
     config:
-      name: common,report-batch
+      name: common,logback.xml,report-batch
 
 server:
   port: 0

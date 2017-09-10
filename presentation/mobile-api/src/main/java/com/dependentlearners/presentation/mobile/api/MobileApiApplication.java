@@ -19,9 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @EnableDiscoveryClient
 @EnableFeignClients
-@Configuration
-@ComponentScan
-@EnableAutoConfiguration
+@SpringBootApplication
 @RestController
 public class MobileApiApplication {
 

@@ -3,7 +3,7 @@ spring:
     name: web-api
   cloud:
     config:
-      name: common,web-api
+      name: common,logback.xml,web-api
 
 server:
   port: 0

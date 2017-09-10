@@ -3,7 +3,7 @@ spring:
     name: customer
   cloud:
     config:
-      name: common,customer
+      name: common,logback.xml,customer
 
 server:
   port: 0

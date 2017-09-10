@@ -3,7 +3,7 @@ spring:
     name: reconciliation-batch
   cloud:
     config:
-      name: common,reconciliation-batch
+      name: common,logback.xml,reconciliation-batch
 
 server:
   port: 0

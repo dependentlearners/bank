@@ -3,7 +3,7 @@ spring:
     name: mobile-api
   cloud:
     config:
-      name: common,mobile-api
+      name: common,logback.xml,mobile-api
 
 server:
   port: 0
