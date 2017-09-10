@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: service-admin
+
+server:
+  port: 1111
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:2222/eureka}
+  instance:
+    preferIpAddress: true
+
+security:
+  user:
+    name: admin
+    password: admin123
+
+management:
+  security:
+    enabled: false
+

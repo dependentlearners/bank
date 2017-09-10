@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: web-api
+  cloud:
+    config:
+      name: common,web-api
+
+server:
+  port: 0
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:2222/eureka}
+  instance:
+    preferIpAddress: true

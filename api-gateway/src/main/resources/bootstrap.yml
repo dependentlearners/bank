@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+      config:
+        name: common,api-gateway
+
+server:
+  port: 80
+
+zuul:
+  prefix: /api
+  routes:
+    mobile:
+        path: /mobile/**
+        serviceId: mobile-api
+    external:
+        path: /external/**
+        serviceId: external-api
+    web:
+        path: /web/**
+        serviceId: web-api
+    test:
+        path: /redirect/**
+        url: http://google.com
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:2222/eureka}
+  instance:
+    preferIpAddress: true
