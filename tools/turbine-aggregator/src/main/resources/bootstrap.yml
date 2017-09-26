@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: turbine-aggregator
+
+server:
+  port: 5555
+
+info:
+  version: 1.0.0
+  type: Tool
+  usage: Turbine aggregator tool
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:1111/eureka}
+  instance:
+    preferIpAddress: true
+
+turbine:
+  clusterNameExpression: new String("default")
+  app-config: api-gateway, mobile-api, external-api, web-api, transaction, customer, card, payment, account
