@@ -1,7 +1,6 @@
 package com.dependentlearners.services.transaction.controller;
 
-import com.dependentlearners.services.transaction.representation.Customer;
-import com.dependentlearners.services.transaction.representation.Transaction;
+import com.dependentlearners.common.representation.Transaction;
 import com.dependentlearners.services.transaction.service.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

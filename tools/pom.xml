@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <parent>
-        <artifactId>bank</artifactId>
+        <artifactId>bootiful-microservice</artifactId>
         <groupId>com.dependentlearners</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
@@ -18,6 +18,9 @@
         <module>service-admin</module>
         <module>batch-admin</module>
         <module>service-discovery</module>
+        <module>service-trace</module>
+        <module>turbine-aggregator</module>
+        <module>hystrix-dashboard</module>
     </modules>
 
     <properties>

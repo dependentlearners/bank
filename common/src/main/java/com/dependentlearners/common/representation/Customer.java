@@ -1,9 +1,6 @@
-package com.dependentlearners.services.transaction.representation;
+package com.dependentlearners.common.representation;
 
-import com.dependentlearners.services.transaction.constant.CustomerType;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import com.dependentlearners.common.constant.CustomerType;
 
 public class Customer {
 

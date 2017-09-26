@@ -2,8 +2,8 @@ spring:
   application:
     name: api-gateway
   cloud:
-      config:
-        name: common,logback.xml,api-gateway
+    config:
+      name: common,logback.xml,api-gateway
 
 server:
   port: 80
@@ -27,6 +27,6 @@ zuul:
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:2222/eureka}
+      defaultZone: ${EUREKA_URI:http://localhost:1111/eureka}
   instance:
     preferIpAddress: true

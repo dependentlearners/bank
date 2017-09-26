@@ -5,12 +5,13 @@ spring:
     config:
       name: common,logback.xml,report-batch
 
+
 server:
   port: 0
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:2222/eureka}
+      defaultZone: ${EUREKA_URI:http://localhost:1111/eureka}
   instance:
     preferIpAddress: true

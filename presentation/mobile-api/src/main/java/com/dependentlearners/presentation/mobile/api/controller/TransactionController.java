@@ -1,7 +1,7 @@
 package com.dependentlearners.presentation.mobile.api.controller;
 
-import com.dependentlearners.presentation.mobile.api.representation.Transaction;
-import com.dependentlearners.presentation.mobile.api.resource.TransactionResource;
+import com.dependentlearners.common.representation.Transaction;
+import com.dependentlearners.common.resource.TransactionResource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

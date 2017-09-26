@@ -1,4 +1,4 @@
-package com.dependentlearners.presentation.mobile.api.representation;
+package com.dependentlearners.common.representation;
 
 import java.math.BigDecimal;
 

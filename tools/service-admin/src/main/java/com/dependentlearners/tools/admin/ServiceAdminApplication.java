@@ -12,7 +12,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
 @Configuration
 @EnableAutoConfiguration
-@ComponentScan("com.dependentlearners.tools.admin")
 @EnableDiscoveryClient
 @EnableAdminServer
 public class ServiceAdminApplication {

@@ -3,12 +3,17 @@ spring:
     name: service-admin
 
 server:
-  port: 1111
+  port: 3333
+
+info:
+  version: 1.0.0
+  type: Tool
+  usage: Spring boot admin
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:2222/eureka}
+      defaultZone: ${EUREKA_URI:http://localhost:1111/eureka}
   instance:
     preferIpAddress: true
 

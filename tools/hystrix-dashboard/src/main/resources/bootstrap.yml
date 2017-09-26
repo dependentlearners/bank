@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: hystrix-dashboard
+
+server:
+  port: 4444
+
+info:
+  version: 1.0.0
+  type: Tool
+  usage: Hystrix dashboard admin
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:1111/eureka}
+  instance:
+    preferIpAddress: true

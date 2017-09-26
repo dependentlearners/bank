@@ -1,7 +1,7 @@
 package com.dependentlearners.services.customer.service;
 
-import com.dependentlearners.services.customer.constant.CustomerType;
-import com.dependentlearners.services.customer.representation.Customer;
+import com.dependentlearners.common.constant.CustomerType;
+import com.dependentlearners.common.representation.Customer;
 import org.springframework.stereotype.Service;
 
 @Service

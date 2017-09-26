@@ -1,8 +1,7 @@
 package com.dependentlearners.services.transaction.service;
 
-import com.dependentlearners.services.transaction.representation.Customer;
-import com.dependentlearners.services.transaction.representation.Transaction;
-import com.dependentlearners.services.transaction.resource.CustomerResource;
+import com.dependentlearners.common.representation.Transaction;
+import com.dependentlearners.common.resource.CustomerResource;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;

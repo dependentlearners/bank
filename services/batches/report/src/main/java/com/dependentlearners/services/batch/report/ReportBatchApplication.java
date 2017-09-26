@@ -3,7 +3,7 @@ package com.dependentlearners.services.batch.report;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+//@SpringBootApplication
 public class ReportBatchApplication {
 
     public static void main(String[] args) {

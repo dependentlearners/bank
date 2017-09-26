@@ -1,6 +1,6 @@
-package com.dependentlearners.services.transaction.resource;
+package com.dependentlearners.common.resource;
 
-import com.dependentlearners.services.transaction.representation.Customer;
+import com.dependentlearners.common.representation.Customer;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

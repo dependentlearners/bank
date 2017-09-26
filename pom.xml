@@ -6,16 +6,16 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.6.RELEASE</version>
+		<version>1.5.3.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
 	<groupId>com.dependentlearners</groupId>
-	<artifactId>bank</artifactId>
+	<artifactId>bootiful-microservice</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>bank</name>
+	<name>bootiful-microservice</name>
 	<description>Demo project on microservices using spring cloud</description>
 
 	<modules>
@@ -23,10 +23,18 @@
 		<module>api-gateway</module>
 		<module>presentation</module>
 		<module>tools</module>
-	</modules>
+        <module>common</module>
+    </modules>
 
 	<properties>
-		<spring-cloud.version>Dalston.SR1</spring-cloud.version>
+		<spring-cloud-config.version>1.3.2.RELEASE</spring-cloud-config.version>
+		<spring-boot-admin.version>1.5.0</spring-boot-admin.version>
+		<eureka.version>1.3.4.RELEASE</eureka.version>
+		<zuul.version>1.3.4.RELEASE</zuul.version>
+		<feign.version>1.3.4.RELEASE</feign.version>
+		<zipkin.version>1.31.1</zipkin.version>
+		<spring-cloud-zipkin.version>1.0.0.RELEASE</spring-cloud-zipkin.version>
+		<spring-cloud.version>Camden.SR7</spring-cloud.version>
 	</properties>
 
 	<dependencies>
@@ -44,49 +52,45 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-config-server</artifactId>
-				<version>1.3.2.RELEASE</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-config-client</artifactId>
-				<version>1.3.2.RELEASE</version>
+				<groupId>com.dependentlearners</groupId>
+				<artifactId>common</artifactId>
+				<version>${project.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>de.codecentric</groupId>
 				<artifactId>spring-boot-admin-server</artifactId>
-				<version>1.5.3</version>
+				<version>${spring-boot-admin.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>de.codecentric</groupId>
 				<artifactId>spring-boot-admin-server-ui</artifactId>
-				<version>1.5.3</version>
+				<version>${spring-boot-admin.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>de.codecentric</groupId>
 				<artifactId>spring-boot-admin-server-ui-login</artifactId>
-				<version>1.5.3</version>
+				<version>${spring-boot-admin.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-starter-zuul</artifactId>
-				<version>1.3.4.RELEASE</version>
+				<groupId>de.codecentric</groupId>
+				<artifactId>spring-boot-admin-server-ui-hystrix</artifactId>
+				<version>${spring-boot-admin.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-starter-eureka</artifactId>
-				<version>1.3.4.RELEASE</version>
+				<groupId>io.zipkin.java</groupId>
+				<artifactId>zipkin</artifactId>
+				<version>${zipkin.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-starter-eureka-server</artifactId>
-				<version>1.3.4.RELEASE</version>
+				<groupId>io.zipkin.java</groupId>
+				<artifactId>zipkin-server</artifactId>
+				<version>${zipkin.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-starter-feign</artifactId>
-				<version>1.3.4.RELEASE</version>
+				<groupId>io.zipkin.java</groupId>
+				<artifactId>zipkin-autoconfigure-ui</artifactId>
+				<version>${zipkin.version}</version>
+				<scope>runtime</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>

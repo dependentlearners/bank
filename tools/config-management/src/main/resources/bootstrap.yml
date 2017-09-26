@@ -14,10 +14,13 @@ server:
 
 info:
   version: 1.0.0
+  type: Tool
+  usage: Configuration management server
+
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:2222/eureka}
+      defaultZone: ${EUREKA_URI:http://localhost:1111/eureka}
   instance:
     preferIpAddress: true

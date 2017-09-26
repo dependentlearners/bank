@@ -1,6 +1,6 @@
 package com.dependentlearners.services.customer.controller;
 
-import com.dependentlearners.services.customer.representation.Customer;
+import com.dependentlearners.common.representation.Customer;
 import com.dependentlearners.services.customer.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

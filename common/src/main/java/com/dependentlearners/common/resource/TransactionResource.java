@@ -1,6 +1,6 @@
-package com.dependentlearners.presentation.mobile.api.resource;
+package com.dependentlearners.common.resource;
 
-import com.dependentlearners.presentation.mobile.api.representation.Transaction;
+import com.dependentlearners.common.representation.Transaction;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
