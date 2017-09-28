@@ -33,6 +33,11 @@ public class TraceConfig {
     }
 
     @Bean
+    public RestTemplate restTemplate(){
+        return new RestTemplate();
+    }
+
+    @Bean
     public ZipkinSpanReporter makeZipkinSpanReporter() {
         return new ZipkinSpanReporter() {
             private HttpZipkinSpanReporter delegate;
@@ -44,9 +49,8 @@ public class TraceConfig {
                 if (baseUrl == null || !instance.getHomePageUrl().equals(baseUrl)) {
                     baseUrl = instance.getHomePageUrl();
                 }
-                delegate = new HttpZipkinSpanReporter(baseUrl,
+                delegate = new HttpZipkinSpanReporter(restTemplate(), baseUrl,
                         zipkinProperties.getFlushInterval(),
-                        zipkinProperties.getCompression().isEnabled(),
                         spanMetricReporter);
                 if (!span.name.matches(skipPattern)) {
                     delegate.report(span);
