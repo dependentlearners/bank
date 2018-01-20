@@ -11,7 +11,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
+@RequestMapping(path = "customers")
 public class CustomerController {
 
     private final CustomerService customerService;
@@ -20,7 +23,16 @@ public class CustomerController {
         this.customerService = customerService;
     }
 
-    @RequestMapping(value = "/customer/{id}",
+    @RequestMapping(
+            method = RequestMethod.GET,
+            produces = {
+                    MediaType.APPLICATION_JSON_VALUE
+            })
+    public ResponseEntity<List<Customer>> getCustomers(){
+        return new ResponseEntity<List<Customer>>(customerService.getCustomers(), HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "{id}",
             method = RequestMethod.GET,
             produces = {
                     MediaType.APPLICATION_JSON_VALUE

@@ -28,6 +28,7 @@
 
 	<properties>
 		<spring-boot-admin.version>1.5.4</spring-boot-admin.version>
+		<commons-io.version>2.5</commons-io.version>
 		<zipkin.version>1.31.1</zipkin.version>
 		<spring-cloud-zipkin.version>1.0.0.RELEASE</spring-cloud-zipkin.version>
 		<spring-cloud.version>Dalston.SR3</spring-cloud.version>
@@ -51,6 +52,11 @@
 				<groupId>com.dependentlearners</groupId>
 				<artifactId>common</artifactId>
 				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-io</groupId>
+				<artifactId>commons-io</artifactId>
+				<version>${commons-io.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>de.codecentric</groupId>
@@ -97,5 +103,18 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>

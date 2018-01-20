@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping(path = "transactions")
 public class TransactionController {
 
     private final TransactionService transactionService;
@@ -20,16 +21,16 @@ public class TransactionController {
         this.transactionService = transactionService;
     }
 
-    @RequestMapping(path = "/transaction",
+    @RequestMapping(
             method = RequestMethod.GET,
             produces = {
                     MediaType.APPLICATION_JSON_VALUE
             })
     ResponseEntity<List<Transaction>> getAllTransactions() {
-        return null;
+        return new ResponseEntity<>(transactionService.getTransactions(), HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/transaction/{id}",
+    @RequestMapping(path = "{id}",
             method = RequestMethod.GET,
             produces = {
                     MediaType.APPLICATION_JSON_VALUE
@@ -38,7 +39,7 @@ public class TransactionController {
         return new ResponseEntity<Transaction>(transactionService.getTransactionById(id), HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/transaction",
+    @RequestMapping(
             method = RequestMethod.POST,
             produces = {
                     MediaType.APPLICATION_JSON_VALUE
@@ -47,7 +48,7 @@ public class TransactionController {
         return null;
     }
 
-    @RequestMapping(value = "/transaction/{id}",
+    @RequestMapping(path = "{id}",
             method = RequestMethod.DELETE,
             produces = {
                     MediaType.APPLICATION_JSON_VALUE
@@ -56,7 +57,7 @@ public class TransactionController {
         return null;
     }
 
-    @RequestMapping(value = "/transaction/{id}",
+    @RequestMapping(path = "{id}",
             method = RequestMethod.PUT,
             produces = {
                     MediaType.APPLICATION_JSON_VALUE

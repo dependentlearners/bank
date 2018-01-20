@@ -14,35 +14,35 @@ import java.util.List;
 @FeignClient(value = "transaction")
 public interface TransactionResource {
 
-    @RequestMapping(value = "/transaction",
+    @RequestMapping(value = "/transactions",
             method = RequestMethod.GET,
             produces = {
                     MediaType.APPLICATION_JSON_VALUE
             })
     ResponseEntity<List<Transaction>> getAllTransactions();
 
-    @RequestMapping(value = "/transaction/{id}",
+    @RequestMapping(value = "/transactions/{id}",
             method = RequestMethod.GET,
             produces = {
                     MediaType.APPLICATION_JSON_VALUE
             })
     ResponseEntity<Transaction> getTransactionById(@PathVariable(value = "id") long id);
 
-    @RequestMapping(value = "/transaction",
+    @RequestMapping(value = "/transactions",
             method = RequestMethod.POST,
             produces = {
                     MediaType.APPLICATION_JSON_VALUE
             })
     ResponseEntity<Transaction> createTransaction(@RequestBody Transaction transaction);
 
-    @RequestMapping(value = "/transaction/{id}",
+    @RequestMapping(value = "/transactions/{id}",
             method = RequestMethod.DELETE,
             produces = {
                     MediaType.APPLICATION_JSON_VALUE
             })
     ResponseEntity<Transaction> removeTransaction(@PathVariable(value = "id") long id);
 
-    @RequestMapping(value = "/transaction/{id}",
+    @RequestMapping(value = "/transactions/{id}",
             method = RequestMethod.PUT,
             produces = {
                     MediaType.APPLICATION_JSON_VALUE

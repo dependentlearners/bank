@@ -45,15 +45,19 @@ public class TraceConfig {
 
             @Override
             public void report(Span span) {
-                InstanceInfo instance = eurekaClient.getNextServerFromEureka("service-trace", false);
-                if (baseUrl == null || !instance.getHomePageUrl().equals(baseUrl)) {
-                    baseUrl = instance.getHomePageUrl();
-                }
-                delegate = new HttpZipkinSpanReporter(restTemplate(), baseUrl,
-                        zipkinProperties.getFlushInterval(),
-                        spanMetricReporter);
-                if (!span.name.matches(skipPattern)) {
-                    delegate.report(span);
+                try{
+                    InstanceInfo instance = eurekaClient.getNextServerFromEureka("service-trace", false);
+                    if (baseUrl == null || !instance.getHomePageUrl().equals(baseUrl)) {
+                        baseUrl = instance.getHomePageUrl();
+                    }
+                    delegate = new HttpZipkinSpanReporter(restTemplate(), baseUrl,
+                            zipkinProperties.getFlushInterval(),
+                            spanMetricReporter);
+                    if (!span.name.matches(skipPattern)) {
+                        delegate.report(span);
+                    }
+                }catch (Exception e){
+                    System.err.println("trace server is not available, hence not able to report span");
                 }
             }
         };
