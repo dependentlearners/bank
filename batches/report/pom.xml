@@ -5,12 +5,12 @@
 
     <parent>
         <artifactId>batches</artifactId>
-        <groupId>com.dependentlearners.services</groupId>
+        <groupId>com.dependentlearners.bootiful</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.dependentlearners.services.batch</groupId>
+    <groupId>com.dependentlearners.bootiful.batch</groupId>
     <artifactId>report</artifactId>
     <packaging>jar</packaging>
 

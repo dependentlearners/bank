@@ -10,7 +10,7 @@
 		<relativePath/>
 	</parent>
 
-	<groupId>com.dependentlearners</groupId>
+	<groupId>com.dependentlearners.bootiful</groupId>
 	<artifactId>bootiful-microservice</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
@@ -49,7 +49,7 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>com.dependentlearners</groupId>
+				<groupId>com.dependentlearners.bootiful</groupId>
 				<artifactId>common</artifactId>
 				<version>${project.version}</version>
 			</dependency>

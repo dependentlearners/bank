@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: notification
+  cloud:
+    config:
+      name: common,logback.xml,notification
+      uri: http://localhost:8888
+
+server:
+  port: 0
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:1111/eureka}
+  instance:
+    preferIpAddress: true
