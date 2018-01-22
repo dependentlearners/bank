@@ -20,6 +20,7 @@
 
 	<modules>
 		<module>services</module>
+		<module>batches</module>
 		<module>api-gateway</module>
 		<module>presentation</module>
 		<module>tools</module>
